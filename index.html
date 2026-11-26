@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MAIGA-AI</title>
+</head>
+<body style="text-align:center; font-family:Arial; background:#111; color:white; padding:30px;">
+<h1>🤖 MAIGA-AI</h1>
+<p>Bonjour, je suis MAIGA-AI. Pose-moi une question !</p>
+<input id="q" placeholder="Écris ici..." style="padding:10px; width:80%;">
+<br><br>
+<button onclick="parler()" style="padding:10px 20px; background:yellow; border:none;">Parler</button>
+<p id="reponse" style="margin-top:20px; font-size:18px;"></p>
+<script>
+function parler(){
+  let q = document.getElementById("q").value.toLowerCase();
+  let r = document.getElementById("reponse");
+  if(q.includes("bonjour")){ r.innerHTML = "Bonjour mon ami ! Comment tu vas ?"; }
+  else if(q.includes("ton nom")){ r.innerHTML = "Je m'appelle MAIGA-AI, créé par Mohamad Maiga."; }
+  else { r.innerHTML = "J'ai compris : " + q; }
+}
+</script>
+</body>
+</html>
